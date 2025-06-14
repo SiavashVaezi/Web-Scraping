@@ -86,5 +86,5 @@ In the first project I used selenium library to extract data from one of the mai
 
 4) Use Pandas to save the extracted data to a excel file
    ```python
-   data = pd.DataFrame({'Title': title, 'Rate': Rate})
-   data.to_excel('Movies.xlsx', index=False, engine='xlsxwriter')
+    data = pd.DataFrame({'Title': title, 'Rate': Rate})
+    data.to_excel('Movies.xlsx', index=False, engine='xlsxwriter')
