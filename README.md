@@ -85,6 +85,6 @@ In the first project I used selenium library to extract data from one of the mai
   print(f"Title count: {len(title)}, Rate count: {len(Rate)}")
 
 4) Use Pandas to save the extracted data to a excel file
-   ```python
-      data = pd.DataFrame({'Title': title, 'Rate': Rate})
+   
+      ```pythondata = pd.DataFrame({'Title': title, 'Rate': Rate})
       data.to_excel('Movies.xlsx', index=False, engine='xlsxwriter')
