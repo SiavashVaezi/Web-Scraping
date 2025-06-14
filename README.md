@@ -15,11 +15,13 @@ In the first project I used selenium library to extract data from one of the mai
       import time
       import pandas as pd
       from selenium.webdriver.chrome.service import Service
-3) Selenium Web-Driver
+      
+2) Selenium Web-Driver
       ```python
       service = Service("chromedriver.exe")
       driver = webdriver.Chrome(service=service)
-4) Use For-Loops to Scraping in 1500 pages for extracting Job-Titles/Locations/Salaries
+      
+3) Use For-Loops to Scraping in 1500 pages for extracting Job-Titles/Locations/Salaries
       ```python
       jobs = []
       for page_num in range(1, 1500):
@@ -59,7 +61,6 @@ import requests
 ```python
 title=[]
 Rate=[]
-
 for page_number in range(1,100):
     url = f'https://www.uptvs.com/category/moviesz/page/{page_number}'
     response=requests.get(url, headers={'User-Agent': 'Mozilla/5.0'})
