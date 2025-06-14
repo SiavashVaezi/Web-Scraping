@@ -9,11 +9,15 @@ A passionate data science learner with a keen interest in business analysis thro
 In the first project I used selenium library to extract data from one of the main job search platform. Here are the steps I took in this project:
 1) Importing Libraries
    
-      from selenium import webdriver/n
-      from selenium.webdriver.common.by import By/n
-      import time/n
-      import pandas as pd/n
-      from selenium.webdriver.chrome.service import Service/n
+      from selenium import webdriver
+   
+      from selenium.webdriver.common.by import By
+   
+      import time
+   
+      import pandas as pd
+   
+      from selenium.webdriver.chrome.service import Service
 3) Selenium Web-Driver
    
       service = Service("chromedriver.exe")
