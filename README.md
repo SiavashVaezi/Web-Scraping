@@ -46,8 +46,8 @@ print(f"Title count: {len(title)}, Rate count: {len(Rate)}")
 data = pd.DataFrame({'Title': title, 'Rate': Rate})
 
 data.to_excel('Movies.xlsx', index=False, engine='xlsxwriter')
-
-## Project 2: Job Search Platform (Selenium)
+#####
+## Project 1: Movie Platform (BeautifulSoup)
 In the first project I used selenium library to extract data from one of the main job search platform. Here are the steps I took in this project:
 1) Importing Libraries
    
