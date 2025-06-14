@@ -78,7 +78,7 @@ In the first project I used selenium library to extract data from one of the mai
             if float(rating)<=10:
                 Rate.append(str(float(rating)))
 
-3) Checking if data extraction is being done correctly
+3) Checking if data extraction is being done correctly before saving to a Excel File
   ```python
   if not title or not Rate :
     print("Warning: No job data extracted. Check your selectors.")
