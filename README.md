@@ -49,16 +49,16 @@ In the first project I used selenium library to extract data from one of the mai
 
 ## Project 2: Movie Platform (BeautifulSoup)
 
+1) Importing Libraries
 ```python
 import pandas as pd
 from bs4 import BeautifulSoup
 import requests
-from pandas.core.computation.ops import isnumeric
 
+2) Use For-Loops to Scraping in different pages
+```python
 title=[]
-Genre=[]
 Rate=[]
-rate=[]
 
 for page_number in range(1,100):
     url = f'https://www.uptvs.com/category/moviesz/page/{page_number}'
@@ -76,15 +76,13 @@ for page_number in range(1,100):
             if float(rating)<=10:
                 Rate.append(str(float(rating)))
 
-# rate += ["Unknown"] * (len(title) - len(rate))
-
-
+3) Checking if data extraction has been done correctly
+```python
 if not title or not Rate :
     print("Warning: No job data extracted. Check your selectors.")
-
-
 print(f"Title count: {len(title)}, Rate count: {len(Rate)}")
 
+4) Use Pandas to save the extracted data to a excel file
+```python
 data = pd.DataFrame({'Title': title, 'Rate': Rate})
-
 data.to_excel('Movies.xlsx', index=False, engine='xlsxwriter')
