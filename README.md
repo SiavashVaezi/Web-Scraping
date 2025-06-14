@@ -16,11 +16,11 @@ In the first project I used selenium library to extract data from one of the mai
       import pandas as pd
       from selenium.webdriver.chrome.service import Service
 3) Selenium Web-Driver
-   
+      ```python
       service = Service("chromedriver.exe")
       driver = webdriver.Chrome(service=service)
 4) Use For-Loops to Scraping in 1500 pages for extracting Job-Titles/Locations/Salaries
-   
+      ```python
       jobs = []
       for page_num in range(1, 1500):
         driver.get(f'https://jobvision.ir/jobs?page={page_num}')
@@ -43,7 +43,7 @@ In the first project I used selenium library to extract data from one of the mai
         jobs.append({'Title': title_elem.text.strip(), 'City': city, 'Salary': salary})
 
 4) Use Pandas to save the extracted data to a excel file
-   
+      ```python
       data = pd.DataFrame(jobs)
       data.to_excel('Jobs.xlsx', index=False)
 
