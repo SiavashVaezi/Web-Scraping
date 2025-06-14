@@ -7,16 +7,16 @@ A passionate data science learner with a keen interest in business analysis thro
 
 ## Project 1: Job Search Platform
 In the first project I used selenium library to extract data from one of the main job search platform. Here are the steps I took in this project:
-#1) Importing Libraries 
+1) Importing Libraries 
       from selenium import webdriver
       from selenium.webdriver.common.by import By
       import time
       import pandas as pd
       from selenium.webdriver.chrome.service import Service
-#2) Selenium Web-Driver
+2) Selenium Web-Driver
       service = Service("chromedriver.exe")
       driver = webdriver.Chrome(service=service)
-#3) Use For-Loops to Scraping in 1500 pages for extracting Job-Titles/Locations/Salaries
+3) Use For-Loops to Scraping in 1500 pages for extracting Job-Titles/Locations/Salaries
       jobs = []
       for page_num in range(1, 1500):
         driver.get(f'https://jobvision.ir/jobs?page={page_num}')
@@ -38,7 +38,7 @@ In the first project I used selenium library to extract data from one of the mai
 
         jobs.append({'Title': title_elem.text.strip(), 'City': city, 'Salary': salary})
 
-#4) Use Pandas to save the extracted data to a excel file
+4) Use Pandas to save the extracted data to a excel file
       data = pd.DataFrame(jobs)
       data.to_excel('Jobs.xlsx', index=False)
 
