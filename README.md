@@ -78,13 +78,13 @@ In the first project I used selenium library to extract data from one of the mai
             if float(rating)<=10:
                 Rate.append(str(float(rating)))
 
-3) Checking if data extraction has been done correctly
+3) Checking if data extraction is being done correctly
   ```python
   if not title or not Rate :
     print("Warning: No job data extracted. Check your selectors.")
   print(f"Title count: {len(title)}, Rate count: {len(Rate)}")
 
 4) Use Pandas to save the extracted data to a excel file
-      ```python
+   ```python
       data = pd.DataFrame({'Title': title, 'Rate': Rate})
       data.to_excel('Movies.xlsx', index=False, engine='xlsxwriter')
