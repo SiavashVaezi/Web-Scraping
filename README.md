@@ -52,16 +52,18 @@ In the first project I used selenium library to extract data from one of the mai
 ## Project 2: Movie Platform (BeautifulSoup)
 
 1) Importing Libraries
-```python
-import pandas as pd
-from bs4 import BeautifulSoup
-import requests
+   
+  ```python
+  import pandas as pd
+  from bs4 import BeautifulSoup
+  import requests
 
 2) Use For-Loops to Scraping in different pages
-```python
-title=[]
-Rate=[]
-for page_number in range(1,100):
+
+  ```python
+  title=[]
+  Rate=[]
+  for page_number in range(1,100):
     url = f'https://www.uptvs.com/category/moviesz/page/{page_number}'
     response=requests.get(url, headers={'User-Agent': 'Mozilla/5.0'})
     soup=BeautifulSoup(response.text, 'html.parser')
@@ -78,12 +80,12 @@ for page_number in range(1,100):
                 Rate.append(str(float(rating)))
 
 3) Checking if data extraction has been done correctly
-```python
-if not title or not Rate :
+  ```python
+  if not title or not Rate :
     print("Warning: No job data extracted. Check your selectors.")
-print(f"Title count: {len(title)}, Rate count: {len(Rate)}")
+  print(f"Title count: {len(title)}, Rate count: {len(Rate)}")
 
 4) Use Pandas to save the extracted data to a excel file
-```python
-data = pd.DataFrame({'Title': title, 'Rate': Rate})
-data.to_excel('Movies.xlsx', index=False, engine='xlsxwriter')
+  ```python
+  data = pd.DataFrame({'Title': title, 'Rate': Rate})
+  data.to_excel('Movies.xlsx', index=False, engine='xlsxwriter')
