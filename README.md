@@ -28,8 +28,6 @@ for page_number in range(1,100):
     movie_rate=soup.select('span.text-gray-2')
     for t in movie_title[3:]:
         title.append(t.get_text(strip=True))
-    # for g in movie_genre:
-    #     Genre.append(g.get_text(strip=True))
     for r in movie_rate:
         rating=r.get_text(strip=True)
         if rating.replace('.', '', 1).isdigit():
